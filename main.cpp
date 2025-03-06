@@ -9,7 +9,7 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
 
     Person people[3];
-    char buff[50];
+    char buff[100];
     for (int i = 0; i < 3; i++) {
         cout << "Enter name of person " << i + 1 << ": ";
         cin.getline(buff, 50);
@@ -20,13 +20,12 @@ int main() {
         cin >> people[i].height;
         cin.ignore();
     }
-    for (int i = 0; i < 3; i++) {
-        cout << people[i].name << " " << people[i].age << " " << people[i].height << endl;
+    for (auto & i : people) {
+        cout << i.name << " " << i.age << " " << i.height << endl;
     }
 
-    if (people[1]==people[2]) {
 
-    }
+    cout << "Hello World!" << endl;
 
     return 0;
 }
